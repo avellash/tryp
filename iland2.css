@@ -43,20 +43,27 @@ nav a:hover {
 
 .card h2 {
   color: #3b82f6; /* biru neon untuk judul section */
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.7);
 }
 
-/* Peserta */
-#peserta li {
+.peserta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;           /* jarak antar kolom */
+  padding: 0 1rem;     /* jarak dari tepi layar */
+}
+
+.peserta-card {
   background: rgba(25, 25, 35, 0.9);
-  padding: 1rem;
-  border-radius: 10px;
+  padding: 1.5rem;     /* isi card lebih longgar */
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 0 0 10px rgba(106, 90, 205, 0.6), 
+  box-shadow: 0 0 10px rgba(106, 90, 205, 0.6),
               0 0 6px rgba(59, 130, 246, 0.5);
   transition: 0.3s;
 }
 
-#peserta li:hover {
+.peserta-card:hover {
   transform: scale(1.03);
   box-shadow: 0 0 20px rgba(155, 89, 182, 0.8),
               0 0 15px rgba(59, 130, 246, 0.7);
@@ -65,6 +72,28 @@ nav a:hover {
 #peserta h3 {
   margin-bottom: 0.5rem;
   color: #3b82f6; /* biru neon untuk ranking */
+}
+
+.performance-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.performance-item {
+  background: rgba(30, 30, 30, 0.9);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(138, 43, 226, 0.6);
+}
+
+#lagu ol {
+  padding-left: 1.5rem;
+}
+
+#lagu li {
+  margin-bottom: 0.5rem;
+  color: #eee;
 }
 
 /* Button */
